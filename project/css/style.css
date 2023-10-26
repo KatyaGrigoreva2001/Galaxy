@@ -121,8 +121,17 @@ img {
   display: none;
   width: 168px;
   height: 44px;
-  transform: translateX(-65%);
+  transform: translate(-65%, 10%); 
+}
+
+.language__block--rus {
   background-image: url('../img/language.svg');
+}
+
+.language__block--bel {
+  background-image: url('../img/language-bel.svg');
+  background-repeat: no-repeat;
+  transform: translate(-43%, 10%);
 }
 
 .language__flex {
@@ -211,17 +220,17 @@ img {
 }
 
 .header__icons {
-  padding-top: 2px;
+  padding-top: 5px;
   gap: 18px;
 }
 
 .header__icon {
   outline: none;
-  transition: fill 0.3s ease-in-out;
 }
 
 .header__icon svg {
   fill: #718095;
+  transition: fill 0.3s ease-in-out;
 }
 
 .header__icon:hover svg,
@@ -230,10 +239,8 @@ img {
 }
 
 .header__icon:active svg {
-  fill: #1F2937;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
+  fill: #0D1521;
 }
-
 
 .header__burger-btn {
   display: none;
@@ -286,8 +293,16 @@ img {
   outline: none;
 }
 
+.nav__icons {
+  display: none;
+}
+
 .header.open .nav__language {
-  display: block;
+  display: none;
+}
+
+.header.open .nav__icons {
+  display: flex;
 }
 
 .nav__bel {
@@ -316,13 +331,13 @@ img {
   position: relative;
   display: flex;
   margin-top: 10px;
-  padding: 40px 48px;
+  padding: 40px 50px;
   border-radius: 16px;
   background: #1F2937;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 24px;
+  gap: 20px;
   transform: translateX(4%);
   z-index: 2;
 }
@@ -332,10 +347,9 @@ img {
 }
 
 .hero__title {
-  display: none;
   margin: 0;
   color: #FAFCFF;
-  font-size: 38px;
+  font-size: 44.5px;
   font-weight: 900;
   line-height: 54px;
 }
@@ -449,9 +463,8 @@ img {
 }
 
 .we__btn:active {
-  background-color: #1F2937;
+  background-color: #0D1521;
   color: var(--white);
-  box-shadow: 0px 4px 4px 0px rgba(250, 252, 255, 0.20) inset;
 }
 
 /*ПОП-АП УСТАВ*/
@@ -543,6 +556,7 @@ img {
 }
 
 /*presentation*/
+
 .present {
   display: block;
   position: fixed;
@@ -556,6 +570,8 @@ img {
 
 .present__container--before {
   max-width: 100%;
+  border: 1px solid #718095;
+  border-radius: 18px;
 }
 
 
@@ -567,6 +583,7 @@ img {
   transform: translate(0, -50%);
   margin: auto;
   max-width: 80%;
+  border: 2px solid transparent;
 }
 
 .present__slideshow {
@@ -672,8 +689,7 @@ img {
 }
 
 .almanacs__btn:active {
-  background-color: #1F2937;
-  box-shadow: 0px 4px 4px 0px rgba(250, 252, 255, 0.20) inset;
+  background-color: #0D1521;
   color: #FAFCFF;
 }
 
@@ -777,7 +793,9 @@ img {
 
 .alm__block {
   max-width: 396px;
+  max-height: 344px;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .alm__name {
@@ -847,8 +865,8 @@ img {
 
 .alm__svg {
   position: absolute;
-  right: 6%;
-  bottom: 5%;
+  right: 8%;
+  bottom: 4%;
   cursor: pointer;
 }
 
@@ -861,8 +879,7 @@ img {
   padding: 12px 12px;
   color: #000;
   text-align: center;
-  font-family: Roboto;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 400;
   line-height: 14px;
   border-radius: 8px;
@@ -883,7 +900,7 @@ img {
 
 .write__container {
   flex-direction: column;
-  gap: 62px;
+  gap: 61px;
   margin-top: 145px;
 }
 
@@ -1088,6 +1105,10 @@ img {
   line-height: 150%;
 }
 
+.footer__we--bel {
+  max-width: 206px;
+}
+
 .footer__links {
   gap: 18px;
 }
@@ -1098,7 +1119,7 @@ img {
 
 .footer__icon svg {
   fill: #F8F8F8;
-  transition: fill 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 
 .footer__icon:hover svg,
@@ -1107,8 +1128,7 @@ img {
 }
 
 .footer__icon:active svg {
-  fill: #B8BFCA;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 20));
+  fill: #A3AEC1;
 }
 
 .pps {
@@ -1125,7 +1145,7 @@ img {
 }
 
 .pps__creators {
-  gap: 41px;
+  gap: 51px;
 }
 
 .pps__text {
